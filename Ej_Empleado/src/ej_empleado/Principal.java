@@ -14,10 +14,13 @@ public class Principal {
         empleado_1.cant_horas_extras(2);  //Setter---Defino la cantidad de horas extras que tuvo.
         empleado_1.cant_agnos_antiguedad(5);  //Setter---Defino la cantidad de años de antiguedad.
         
+        
         System.out.println("El Sueldo de Martin Rodriguez es de $ : " + empleado_1.dame_sueldo());
         System.out.println("Cantidad de horas extras en $ : " + empleado_1.dame_horas_extras());
         System.out.println("Sueldo bruto del empleado en $ : " + empleado_1.dame_sueldo_bruto());
-        System.out.println("Antiguedad del empleado es de " + empleado_1.dame_antiguedad() + " años ");
+        //System.out.println("Antiguedad del empleado es de " + empleado_1.dame_antiguedad() + " años ");
+        System.out.println("El sueldo Neto, si es menor a $ 1800 es : " + empleado_1.sue_neto_menor_a_1800());
+        System.out.println("El sueldo Neto, si es mayor a $ 1800 es : " + empleado_1.sue_neto_mayor_a_1800());
 
 
     }

@@ -9,12 +9,19 @@ public class Empleado {
     private Integer horas_extras;
     private Integer sueldo_bruto;
     private Integer antiguedad = 800 , cant_agnos;
-   
+    private Integer sueldo_neto_menor_a_1800;
+    private Integer sueldo_mayor_a_1800;
+    
+    
     
   public Empleado(String Nombre, String Apellido){
       
       this.Nombre = Nombre;
       this.Apellido = Apellido;
+      
+      
+  
+
   }
 
 
@@ -57,17 +64,31 @@ public class Empleado {
         
     }
     
-     public Integer dame_antiguedad(){
+    /* public Integer dame_antiguedad(){
         
         return ;
         
         
         
-    }
+    }*/
 
+   
+    public Integer sue_neto_menor_a_1800(){
     
-
-
-
+        if (this.sueldo_bruto <= 18000) {
+            this.sueldo_neto_menor_a_1800 = this.sueldo_bruto - ((this.sueldo_bruto * 20)/100);
+        }
+        return sueldo_neto_menor_a_1800;
+    }
+    
+        
+    public Integer sue_neto_mayor_a_1800(){
+        
+    if (this.sueldo_bruto > 18000) {
+            this.sueldo_mayor_a_1800 = this.sueldo_bruto - ((this.sueldo_bruto * 24)/100);
+        }
+        return sueldo_mayor_a_1800;
+}
+    
 }
 
